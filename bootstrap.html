@@ -3,11 +3,48 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <!-- set page width to size of device and zoom to 1 -->
+    <title>Bootstrap Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <title>Bootstrap Tutorial</title>
     <style>
+    .jumbotron{
+      background-color: lightblue;
+      color: white;
+    }
     </style>
   </head>
   <body>
+    <div class="container">
+      <!-- padding around everything it contains, container-fluid does not
+    boostrap grids require container -->
+      <div class="page-header">
+        <!-- add space around text and enlarge it, add underline -->
+        <h1>BootStrap Tutorial</h1>
+      </div>
 
+      <div class="jumbotron">
+        <!-- enlarge fonts and put everything inside gray box -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <p>
+        <a href="#" class="btn btn-default btn-lg" role="button">More Info</a>
+        <button type="submit" class="btn btn-danger" roll="button">Button</button>
+        <input type="button" name="" value="Info" class="btn btn-info">
+        <button type="submit" class="btn-primary btn-sm">Primary</button>
+        <button type="submit" class="btn btn-success btn-xs">Success</button>
+        <button type="submit" class="btn btn-warning btn-lg">Warning</button>
+        <button type="submit" class="btn btn-link btn-sm">Link</button>
+      </p>
+    </div>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
