@@ -1,0 +1,85 @@
+Is there any difference between window and document?
+Document represents the DOM, window is global object
+
+can call window and with . notation you can pull up various methods in developer
+
+document is a property of window object.
+
+window.getElementById will return undefined
+document.getElementById will return method
+
+Do document.onload and window.onload fire at the same time?
+onload means when it loads...
+Document fires first.
+
+Window waits for everything to be loaded, document fires as soon as the tree structure is built.
+
+What are the different ways to get an element from the DOM?
+
+document.querySelector()
+document.getElementById()
+document.getElementByClassName()
+document.getElementByTagName('div')
+
+What is fastest way to select elements using CSS selectors?
+getElementById because its a key value pair
+
+fastest to slowest-
+ID
+ClassName
+Tags
+Data-Attributes: Input type === submit
+
+Can I use forEach or similar array methods on a NodeList?
+No, its a list of nodes... not an array. You can convert it into an array using:
+let divsArray = Array.prototype.slice.call(divs)
+let divCollection = Array.from() since it freezes the list.
+
+How do you implement getElementsByAttribute?
+
+function getElementsByAttribute(attribute){
+
+}
+
+How would you add a class to an element by query selector?
+
+function AddClass(selector, className){
+  let element = document.querySelector(selector);
+
+  if (element) {
+    element.classList.add(className);
+  }
+}
+
+How could I verify whether one element is a child of another?
+
+function isDescendant(parent, child){
+  while (child.parent){
+    if (child.parent === parent){
+      return True
+    }
+    else (child = child.parent)
+  }
+  return False;
+}
+
+What is the best way to create a DOM Element?
+document.createElement()
+
+What is createDocumentFragment and why might you use it?
+Dont make repeated calls to DOM, can cause a "reflow"
+let fragment = document.createDocumentFragment(); <=== a super lightweight DOM, append elements to fragment and then append the fragment.
+So, creates a virtual dom for you to add elements instead of hitting the real DOM repeatedly.
+
+
+What is reflow? What causes reflow? How could you reduce reflow?
+Reflow is manipulating the DOM. Every time you change something on the DOM, everything after that has to change. You can avoid this by not setting multiple inline styles.
+
+What is repaint and when does this happen?
+Changing background color or text color, prefer repainting over reflow.
+
+How could you make sure to run some JS only when the dOM is ready? i e document.ready?
+document.readyState === "complete"
+
+What is the event bubble? How do events flow?
+Event triggered on element is triggered on all parent elements, it goes through all parents.
