@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <p id="demo"></p>
+    <p id="paste">Paste: </p>
+    <p id="change">
+      Change me!
+    </p>
+    <p onclick="manipulate(this)">
+      Some Text
+    </p>
+
+    <button type="button"
+    onclick="changer()">CLICK ME</button>
+
+    <script>
+      var x = document.getElementsByTagName("p")
+      document.getElementById('demo').innerHTML = "Hello World";
+      document.getElementById('paste').innerHTML = "Hello there: " + x[0].innerHTML
+      document.write(Date());
+      function changer(){
+        document.getElementById('change').style.color = 'red'
+      }
+      function manipulate(id){
+        id.innerHTML = "NOOOOO"
+      }
+    </script>
+
+  </body>
+</html>

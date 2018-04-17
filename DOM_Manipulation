@@ -67,7 +67,7 @@ What is the best way to create a DOM Element?
 document.createElement()
 
 What is createDocumentFragment and why might you use it?
-Dont make repeated calls to DOM, can cause a "reflow"
+Don't make repeated calls to DOM, can cause a "reflow"
 let fragment = document.createDocumentFragment(); <=== a super lightweight DOM, append elements to fragment and then append the fragment.
 So, creates a virtual dom for you to add elements instead of hitting the real DOM repeatedly.
 
