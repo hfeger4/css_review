@@ -26,4 +26,10 @@ def in order transversal(root, arr = [])
   if root.right
     in_order(root.right, arr)
   end
-  arr 
+  arr
+
+Why do you want to work here:
+Start with how you found the job,
+Go into some research you did,
+Talk about qualifications and points where you fit in.
+Saw their stack, thought you would be a good fit for the position.
