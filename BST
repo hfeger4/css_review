@@ -1,0 +1,29 @@
+BSTNode = Struct.new(:value, :left, :right)
+Ez quick way to make a BST in Ruby
+
+BSTNode.new(x) - Makes new binary search tree node.
+x is the value, you can also pass the children's stuff.
+
+AVL Tree - Self balancing bst.
+
+BST API:
+Insert Logn
+Find Logn
+Delete Logn
+
+
+How to determine if a BST is balanced:
+if root == nil
+  return True
+DFS on every other root, ensure that the difference is never greater than 1.
+
+def in order transversal(root, arr = [])
+  if root.left
+    in order(root.left, arr)
+  and
+    arr.push(root)
+
+  if root.right
+    in_order(root.right, arr)
+  end
+  arr 
