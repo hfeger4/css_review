@@ -1,0 +1,92 @@
+What is Redux:
+A library used for State management-
+a predictable state container for javascript apps
+uses unidirectional data flow to update a read-only state
+framework agnostic.
+
+State Management:
+Allows us to organize huge application states.
+Helps reduce state mutation 'accidents'
+Coordinates well with async code and updates.
+
+Why use it?
+Lightweight, 2kb.
+Relatively easy to start writing and using once you set up boilerplate.
+Separation of data organization from presentation.
+App state becomes read only and immutable.
+
+Three principles of Redux:
+Single source of truth.
+State is read only.
+Changes are made through Pure Functions
+
+3 Pieces of Redux:
+action - type and payload to change state.
+reducer - pure function that actually changes your state
+store - big object that contains our state.
+
+reducer takes an action, the old state, and returns the new state.
+
+Actions:
+payloads of information that send data from your app to the store.
+only source of info for store.
+
+Action Creators:
+A function that returns an action
+Used to dynamically assign info to our actions.
+Envoke action creators are typically what we pass to store.dispatch()
+
+Reducers:
+specify how app state changes in response to actions sent to store
+are pure functions that take prev state, an action, and return the next state.
+dictate new state through reducer design and combineReducers();
+
+Object.assign() and lodash.merge are different, object.assign only makes a shallow copy.
+
+Set types for actions to a string and make it a constant so we cant mistype it.
+use:
+const _nullUser = Object.freeze({
+  currentUser: null
+})
+
+Protip:
+Use-
+import {combineReducers} from 'redux';
+import * as reducers from './reducers';
+
+const todoapp = combineReducers(reducers)
+
+The Store:
+holds application state
+allows access to state via getState();
+Allows state to be updated via dispatch(action)
+Handles subscription and unsupscription to state changes via listeners. - Provider does this.
+
+Creating the Store:
+import {createStore} from 'redux';
+import todoApp from './reducers' //todoApp is basically combineReducers
+const store = createStore(todoApp)
+
+createStore() takes an optional second argument that acts as a default store.
+const store = createStore(todoApp, window.STATE_FROM_SERVER)
+
+Thunk Actions and middleware:
+Thunk middleware allows us to make asynchronous actions creators
+These action creators allow us to communicate with and retrieve persistent data from our back end, or from third party API's
+
+Thunk action creators vs action creators:
+Util file is a list of Ajax requests
+Thunk middleware examines our actions, if you're an object, pass through, if you're a function invoke you and makes this API call.
+
+Inserting Thunk and other middleware into your store.
+preloaded state = {}
+createStore(
+  rootReducer,
+  preloadedState,
+  applyMiddleware(thunk,logger)
+)
+
+Alternatives to redux:
+GraphQL,
+MobX,
+Apollo
