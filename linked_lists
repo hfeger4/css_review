@@ -112,3 +112,18 @@ function doubleAndAppend(linkedList) {
 
     return linkedList;
 }
+
+function reverse_linked_list(linkedlist){
+  current = linkedlist.head
+  prev = null
+  nextNode = null
+
+  while(current){
+    nextNode = current.next
+    current.next = prev
+
+    prev = current
+    current = nextNode
+  }
+  return prev;
+}
