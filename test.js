@@ -6,7 +6,7 @@
   <li><a href="#">fifth item</a></li>
 </ul>
 
-#Destroy all elements inside the UL
+// #Destroy all elements inside the UL
 
 // let destroy = document.getElementById(listToDestroy);
 // destroy.forEach(el => {
