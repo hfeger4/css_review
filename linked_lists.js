@@ -1,8 +1,10 @@
-Functions of a linked list:
-insert 0(1), 0(n) if you want to insert into some place.
-remove 0(n)
-find
-head 0(1)
+// Functions of a linked list:
+// insert 0(1), 0(n) if you want to insert into some place.
+// remove 0(n)
+// find
+// head 0(1)
+
+
 
 class Node {
     constructor(value, next = null) {
