@@ -29,7 +29,7 @@ document.getElementById('listToDestroy').addEventListener('click', ()=> {
   <button class="double">double</button>
 </div>
 
-#button gets destroyed, 2 additional buttons get created in its place.
+// #button gets destroyed, 2 additional buttons get created in its place.
 
 document.getElementByClassName("double").addEventListener('click', ()=>{
   e.preventDefault();
