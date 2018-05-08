@@ -50,14 +50,28 @@ function merge(left,right){
 console.log(mergeSort([1,5,2,3,4]));
 
 //bsearch for position
-function bsearch(arr,left,right,val){
+function b_search(arr,left,right,target){
+
   while(left <= right){
-    let mid = (left + right)//2
-    if(val >= arr[mid]){
-      return left = mid + 1
-    else
-      return right = mid - 1
+    let mid = (left + right) >> 1;
+    if(target >= arr[mid]){
+      left = mid + 1;
+    }else{
+      right = mid - 1;
     }
   }
   return right;
+}
+
+//add biggest difference
+
+function biggest_difference(arr){
+  let biggest_diff = -1;
+  let min = arr[0];
+  for(let i = 1; i < arr.length; i++){
+    let temp_big = arr[i] - min;
+    biggest_diff = biggest_diff > temp_big ? biggest_diff : temp_big;
+    min = min > arr[i] ? arr[i] : min;
+  }
+  return biggest_diff;
 }
