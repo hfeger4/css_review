@@ -14,15 +14,14 @@
 #
 # IO.binwrite("data.bin", '', 6)
 
-def matches(str)
-  if str.match(/Odoo/) && str.match(/#rules/)
-    puts "yay!"
-  end
-end
-
-str = "Odoo and #rule"
-
-matches(str)
+# Printer = function(){
+#     this.print = function() {
+#        console.log(this);
+#     }
+# }
+# var printer = new Printer();
+#
+# let x = printer.print.bind(this)
 
 Test 10: SQL (if you know SQL)
 Write pseudo-SQL statements to create database tables to store the products of a basic webshop.
@@ -31,20 +30,25 @@ Write pseudo-SQL statements to create database tables to store the products of a
 - How would you populate the tables with test data (thousands of products with random values and categories)
 
 CREATE TABLE Products (
-  ProductId int,
-  Name varchar(255),
-  Price int,
+  ProductId integer,
+  Name text,
+  Price integer,
   Creation_date date
-
 )
 
 CREATE TABLE Categories(
-  CategoryID int,
-  Name varchar(255),
-  Flag varchar(255)
+  CategoryID integer,
+  Name text,
+  Flag text
 )
 
 CREATE TABLE ProductsAndCategories(
-  ProductId int,
-  CategoryID int
+  ProductId integer,
+  CategoryID integer
 )
+
+SELECT name
+FROM Products
+JOIN ProductsAndCategories ON Products.ProductID = ProductsAndCategories.ProductID
+  JOIN Categories ON ProductsAndCategories.CategoryID = Categories.CategoryID
+WHERE COUNT("public") > 5
