@@ -63,7 +63,7 @@ function doubleAndAppend(linkedList) {
         previous = currentNode;
         currentNode = currentNode.next;
         return currentNode;
-    }
+    };
 
     while(currentNode) {
         if (currentNode.value === 0
@@ -116,16 +116,16 @@ function doubleAndAppend(linkedList) {
 }
 
 function reverse_linked_list(linkedlist){
-  current = linkedlist.head
-  prev = null
-  nextNode = null
+  let current = linkedlist.head;
+  let prev = null;
+  let nextNode = null;
 
   while(current){
-    nextNode = current.next
-    current.next = prev
+    nextNode = current.next;
+    current.next = prev;
 
-    prev = current
-    current = nextNode
+    prev = current;
+    current = nextNode;
   }
   return prev;
 }
