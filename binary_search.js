@@ -14,3 +14,6 @@ var binary_search = function(array,target){
 };
 
 console.log(binary_search([1,5,2,4,3], 4));
+console.log(binary_search([1,5,2,4,3], 3));
+console.log(binary_search([1,5,2,4,3], 6));
+console.log(binary_search([1,5,2,4,3], 10));
