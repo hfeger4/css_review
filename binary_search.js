@@ -27,9 +27,13 @@ const b_search_position = (arr,target) => {
   return right;
 };
 
-console.log(binary_search([1,5,2,4,3], 4));
-console.log(binary_search([1,5,2,4,3], 3));
-console.log(binary_search([1,5,2,4,3], 6));
-console.log(binary_search([1,5,2,4,3], 10));
+console.log(binary_search([1,2,3,4,5], 4));
+console.log(binary_search([1,2,3,4,5], 3));
+console.log(binary_search([1,2,3,4,5], 6));
+console.log(binary_search([1,2,3,4,5], 10));
 
 console.log("New Bsearch");
+console.log(b_search_position([1,2,3,4,5], 4));
+console.log(b_search_position([1,2,3,4,5], 3));
+console.log(b_search_position([1,2,3,4,5], 6));
+console.log(b_search_position([1,2,3,4,5], 10));
