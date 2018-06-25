@@ -13,7 +13,23 @@ var binary_search = function(array,target){
   return (result === -1) ? -1 : result + 1 + middle;
 };
 
+const b_search_position = (arr,target) => {
+  let left = 0;
+  let right = arr.length-1;
+  while(left <= right){
+    let mid = Math.floor((left + right)/2);
+    if(target >= arr[mid]){
+      left = mid + 1;
+    }else{
+      right = mid - 1;
+    }
+  }
+  return right;
+};
+
 console.log(binary_search([1,5,2,4,3], 4));
 console.log(binary_search([1,5,2,4,3], 3));
 console.log(binary_search([1,5,2,4,3], 6));
 console.log(binary_search([1,5,2,4,3], 10));
+
+console.log("New Bsearch");
